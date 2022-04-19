@@ -1,17 +1,55 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-  background-image: url('https://cdn.wallpapersafari.com/34/60/bATz10.png');
+  background-image: url('../img/fundo.jpg');
+  /*url('https://cdn.wallpapersafari.com/34/60/bATz10.png'); */
   background-size: auto 100vh;
   font-family: Arial;
   height: 100vh;
+  font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar os estilos*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
 
 .menu{
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.menu a{
+  padding: 10px;
+  display: block;
 }
 
 a{
   color: teal;
   text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
 }
 
 a:hover{
@@ -30,10 +68,22 @@ a:hover{
 .site-title{
   color: whitesmoke;
   text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.site-title{
+  font-size: 4em ;
 }
 
 .site-subtitle{
-  color: grey;
+  color: rgb(14, 2, 2);
   text-align: center;
   font-style: italic;
+  font-family: 'Source Code Pro', monospace;
 }
+
+.img-portfolio{
+  height: 180px;
+  width: 180px;
+}
+
