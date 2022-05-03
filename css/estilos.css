@@ -34,16 +34,43 @@ header {
   align-items: center;
 }
 
+.titulo{
+  transform: scale(0.2) 
+  translateY(50vh);
+  opacity: 0;
+  animation: 1s ease 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+
+from{
+
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+}
+
+to{
+
+  transform: scale(1) translateY(0);
+  opacity: 1;
+
+}
+
+}
+
 .menu {
   background-color: white;
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu a {
   padding: 10px;
   display: block;
+  transition: background-color 1s, color 1s;
 }
 
 a {
@@ -65,6 +92,12 @@ a:hover {
   justify-content: space-around;
 }
 
+.menu a:active,
+.menu a:hover{
+  background-color: teal;
+  color: white;
+}
+
 .site-title {
   color: whitesmoke;
   text-align: center;
@@ -82,8 +115,10 @@ a:hover {
   font-family: 'Source Code Pro', monospace;
 }
 
+.contato,
 .portfolio {
   padding: 2em;
+  min-height: 100vh;
 }
 
 .portfolio .grid {
@@ -106,6 +141,7 @@ a:hover {
   }
 }
 
+.contato h2,
 .portfolio h2 {
   color: whitesmoke;
   font-family: 'Press Start 2P', cursive;
@@ -121,4 +157,24 @@ a:hover {
   width: 240px; 
   object-fit: cover;
   object-position: left bottom;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.2) rotate(-2deg);
+}
+
+.contato a{
+  color: black;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px white;
+}
+
+.contato .icons{
+  text-align: center;
 }
