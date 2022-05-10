@@ -9,7 +9,7 @@ body {
   background-image: url('../img/fundo.jpg');
   /*url('https://cdn.wallpapersafari.com/34/60/bATz10.png'); */
   background-size: auto 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'M PLUS Code Latin', sans-serif;
   height: 100vh;
   font-size: 12px;
 }
@@ -34,28 +34,27 @@ header {
   align-items: center;
 }
 
-.titulo{
-  transform: scale(0.2) 
-  translateY(50vh);
+.titulo {
+  transform: scale(0.2) translateY(50vh);
   opacity: 0;
   animation: 1s ease 2s animacaoTitulo forwards;
 }
 
-@keyframes animacaoTitulo{
+@keyframes animacaoTitulo {
 
-from{
+  from {
 
-  transform: scale(0.2) translateY(50vh);
-  opacity: 0;
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
 
-}
+  }
 
-to{
+  to {
 
-  transform: scale(1) translateY(0);
-  opacity: 1;
+    transform: scale(1) translateY(0);
+    opacity: 1;
 
-}
+  }
 
 }
 
@@ -93,7 +92,7 @@ a:hover {
 }
 
 .menu a:active,
-.menu a:hover{
+.menu a:hover {
   background-color: teal;
   color: white;
 }
@@ -115,24 +114,34 @@ a:hover {
   font-family: 'Source Code Pro', monospace;
 }
 
+.sobre,
 .contato,
 .portfolio {
   padding: 2em;
   min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+
 .portfolio .grid {
   display: grid;
   gap: 2em;
 }
 
-@media (min-width: 560px){
+@media (min-width: 560px) {
   .portfolio .grid {
     grid-template-columns: 240px 240px;
   }
 }
 
-@media (min-width: 880px){
+@media (min-width: 880px) {
   .portfolio .grid {
     grid-template-columns: repeat(3, 240px);
     align-content: center;
@@ -141,11 +150,30 @@ a:hover {
   }
 }
 
+.sobre h2,
 .contato h2,
 .portfolio h2 {
   color: whitesmoke;
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 1.5em;
+}
+
+.sobre p {
+  color: white;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
+}
+
+.sobre .avatar{
+  float: left;
+  margin-right: 1em;
+}
+
+.sobre .avatar img{
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  width: 400px;
+  height: 400px;
 }
 
 .portfolio figure {
@@ -154,17 +182,17 @@ a:hover {
 
 .img-portfolio {
   height: 180px;
-  width: 240px; 
+  width: 240px;
   object-fit: cover;
   object-position: left bottom;
   transition: transform 500ms;
 }
 
-.img-portfolio:hover{
+.img-portfolio:hover {
   transform: scale(1.2) rotate(-2deg);
 }
 
-.contato a{
+.contato a {
   color: black;
   font-size: 4em;
   transition: text-shadow 1s;
@@ -175,6 +203,6 @@ a:hover {
   text-shadow: 0px 0px 10px white;
 }
 
-.contato .icons{
+.contato .icons {
   text-align: center;
 }
